@@ -212,9 +212,13 @@ This leads to segmenting messages having two primary benefits:
 The form that a piece of data takes at any layer is called a *protocol data unit* (**PDU**). Also network protocols require that addresses be used for network communication.
 | Layer | PDU | Address |
 | --- | :---: | --- |
-| Application | **DATA** | |
-| Transport | **SEGMENT** | Protocol Address |
-| Network | **FRAME** | Network Host Address|
-| Physical | **BITS** | Physical Address |
+| Application | **Data** | |
+| Transport | **Segment** | Protocol Address |
+| Network | **Packet** | Network Host Address|
+| Data Link | **Frame** | Physical Address |
+| Physical | **Bits** | |
 
 :computer: LAB - [Introduction to Wireshark](https://github.com/13sauca13/Cyberops-associate/blob/fe5b88f0206eb9980a25cfd9a8eca68b575ae9f6/5.%20Network%20protocols/5.3.7%20Lab_Introduction%20to%20wireshark.pdf)
+
+## 6. Ethernet and Internet Protocol (IP)
+Ethernet operates in the data link layer and the physical layer. It is a family of networking technologies defined in the IEEE 802.2 ([LLC](https://en.wikipedia.org/wiki/Logical_link_control)) and 802.3 ([MAC](https://en.wikipedia.org/wiki/Medium_access_control) and Physical layer)standards. 
