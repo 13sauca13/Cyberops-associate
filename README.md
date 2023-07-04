@@ -208,3 +208,12 @@ Packets containing segments for the same destination can be sent over different 
 This leads to segmenting messages having two primary benefits:
 + Increases speed
 + Increases efficiency
+
+The form that a piece of data takes at any layer is called a *protocol data unit* (**PDU**). Also network protocols require that addresses be used for network communication.
+| Layer | PDU | Address |
+| --- | :---: | --- |
+| Application | **DATA** | |
+| Transport | **SEGMENT** | Protocol Address |
+| Network | **FRAME** | Network Host Address|
+| Physical | **BITS** | Physical Address |
+
