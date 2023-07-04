@@ -241,3 +241,10 @@ If sending a packet, the AND operation results in that the packet goes to our ow
 | B | 128.0.0.0/16 to 191.255.0.0/16 | 172.16.0.0/12 |
 | C | 192.0.0.0/24 to 223.255.255.0/24 | 192.18.0.0/16 |
  > There is also a Class D multicast block consisting of 224.0.0.0 to 239.0.0.0 and a Class E experimental address block consisting of 240.0.0.0 – 255.0.0.0.
+
+### 6.5 The Default Gateway
+
+### 6.6 IPv6
+IPv6 addresses are 128 bits in length and written as a string of hexadecimal values. Every four bits is represented by a single hexadecimal digit; for a total of 32 hexadecimal values.
++ Rule 1: Omit leading zeros
++ Rule 2: Double colon ( :: *can be used to replace any single or contiguous string of one or more 16-bit hexet of all zeros*)
