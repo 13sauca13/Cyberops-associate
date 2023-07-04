@@ -5,6 +5,7 @@ Notas del curso Cyberops Associate
 
 ### 1.1 War stories
 :computer: LAB - [Installing the Virtual Machines](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.5%20Lab_Installing%20the%20virtual%20machines.pdf)
+
 :pencil: LAB - [Cybersecurity Case Studies](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.6%20Lab_Cybersecurity%20case%20studies.pdf)
 
 ### 1.2 Threat Actors
