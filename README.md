@@ -248,3 +248,45 @@ If sending a packet, the AND operation results in that the packet goes to our ow
 IPv6 addresses are 128 bits in length and written as a string of hexadecimal values. Every four bits is represented by a single hexadecimal digit; for a total of 32 hexadecimal values.
 + Rule 1: Omit leading zeros
 + Rule 2: Double colon ( :: *can be used to replace any single or contiguous string of one or more 16-bit hexet of all zeros*)
+
+The prefix length can range from 0 to 128. The recommended IPv6 prefix length for LANs and most other types of networks is /64. t is strongly recommended to use a 64-bit Interface ID for most networks. This is because stateless address autoconfiguration (SLAAC) uses 64 bits for the Interface ID. It also makes subnetting easier to create and manage.
+
+## 7. Connectivity verification
+
+### 7.1 ICMP
+ICMP messages common to both ICMPv4 and ICMPv6 include:
++ Host confirmation
++  Destination or Service Unreachable (Codes: 0-Net Unreachable, 1-Host unreachable, 2-Protocol unreachable, 3-Port unreachable)
++  Time exceeded
++  Route redirection
+  
+ICMPv6 includes four new protocols as part of the Neighbor Discovery Protocol (ND or NDP).
++ Messaging between an IPv6 router and an IPv6 device:
+  + Router Solicitation (RS) message
+  + Router Advertisement (RA) message
++ Messaging between IPv6 devices:
+  + Neighbor Solicitation (NS) message
+  + Neighbor Advertisement (NA) message
+ 
+With these messages we have three cases:
++ Router solicitation: RA are sent by routers using SLAAC. When a host is configured to obtain info usin SLAAC, it will send an RS requesting an RA.
++ Address resolution: **COMPLETAR**
++ Duplicate Address Detection (DAD)
+
+### 7.2 Ping and Traceroute Utilities
++ Ping the loopback: This simply tests IP down through the network layer of IP. An error message indicates that TCP/IP is not operational on the host.
++ Ping the Default Gateway: Test the ability of a host to communicate on the local network.
++ Ping a Remote Host: Test the ability of a local host to communicate across an internetwork.
++ Traceroute (test the path): Using traceroute provides round-trip time for each hop along the path and indicates if a hop fails to respond. The round-trip time is the time a packet takes to reach the remote host and for the response from the host to return. An asterisk (*) is used to indicate a lost or unreplied packet.
+
+ICMP is encapsulated directly into IP packets. ICMP uses message codes to differentiate between different types of ICMP messages.
+These are some common message codes:
++ 0 – Echo reply (response to a ping)
++ 3 – Destination Unreachable
++ 5 – Redirect (use another route to your destination)
++ 8 – Echo request (for ping)
++ 11 – Time Exceeded (TTL became 0)
+
+As you will see later in the course, a cybersecurity analyst knows that the optional ICMP payload field can be used in an attack vector to exfiltrate data.
+
+:memo: 
