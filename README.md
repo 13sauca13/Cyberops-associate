@@ -221,4 +221,23 @@ The form that a piece of data takes at any layer is called a *protocol data unit
 :computer: LAB - [Introduction to Wireshark](https://github.com/13sauca13/Cyberops-associate/blob/fe5b88f0206eb9980a25cfd9a8eca68b575ae9f6/5.%20Network%20protocols/5.3.7%20Lab_Introduction%20to%20wireshark.pdf)
 
 ## 6. Ethernet and Internet Protocol (IP)
-Ethernet operates in the data link layer and the physical layer. It is a family of networking technologies defined in the IEEE 802.2 ([LLC](https://en.wikipedia.org/wiki/Logical_link_control)) and 802.3 ([MAC](https://en.wikipedia.org/wiki/Medium_access_control) and Physical layer)standards. 
+
+### 6.1 Ethernet
+Ethernet operates in the data link layer and the physical layer. It is a family of networking technologies defined in the IEEE 802.2 ([LLC](https://en.wikipedia.org/wiki/Logical_link_control)) and 802.3 ([MAC](https://en.wikipedia.org/wiki/Medium_access_control) and Physical layer) standards. 
+The minimum Ethernet frame size is 64 bytes and the maximum is 1518 bytes. This includes all bytes from the destination MAC address field through the frame check sequence (FCS) field. The preamble field is not included when describing the size of the frame.
+Any frame less than 64 bytes in length is considered a “collision fragment” or “runt frame” and is automatically discarded by receiving stations. Frames with more than 1500 bytes of data are considered “jumbo” or “baby giant frames”.
+
+An Ethernet MAC address is a 48-bit binary value expressed as 12 hexadecimal digits (4 bits per hexadecimal digit).
+
+### 6.2 IPv4
+
+### 6.3 Ip Addressing Basics
+If sending a packet, the AND operation results in that the packet goes to our own network the packet will be sent using layer 2 addresses (MAC Addresses)
+
+### 6.4 Types of IPv4 Addresses
+| Class | Range | Private Block |
+| --- | --- | --- |
+| A | 0.0.0.0/8 to 127.0.0.0/8 | 10.0.0.0/8 |
+| B | 128.0.0.0/16 to 191.255.0.0/16 | 172.16.0.0/12 |
+| C | 192.0.0.0/24 to 223.255.255.0/24 | 192.18.0.0/16 |
+ > There is also a Class D multicast block consisting of 224.0.0.0 to 239.0.0.0 and a Class E experimental address block consisting of 240.0.0.0 – 255.0.0.0.
