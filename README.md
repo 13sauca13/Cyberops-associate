@@ -3,7 +3,50 @@ Notas del curso Cyberops Associate
 
 ## 1. The Danger
 
+### 1.1 War stories
+:computer: LAB - [Installing the Virtual Machines](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.5%20Lab_Installing%20the%20virtual%20machines.pdf)
+:pencil: LAB - [Cybersecurity Case Studies](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.6%20Lab_Cybersecurity%20case%20studies.pdf)
+
+### 1.2 Threat Actors
+Threat actors are individuals or groups of individuals who perform cyberattacks.
++ Amateurs (Script Kiddies)
++ Hacktivist
++ Financial Gain
++ Trade secrets and global politics
+
+:pencil: LAB - Learning the details of attacks
+
+### 1.3 Threat impact
+Personally identifiable information (PII) is any information that can be used to positively identify an individual.
+Two subsets of PII are:
++ PHI (*Personal Health Information*)
++ PSI (*Personal Security Information*)
+
+:pencil: LAB - [Visualizing the black hats](https://github.com/13sauca13/Cyberops-associate/blob/6566e92e7b5ff70cf89d64a93a9bd8681dd13df7/1.%20The%20Danger/1.3.4%20Lab_Visualizing%20the%20Black%20Hats.pdf)
+
 ## 2. Fighters in the war against cybercrime
+
+### 2.1 The modern Security Operations Center
+SOCs provide a broad range of services, from monitoring and management, to comprehensive threat solutions and hosted security that can be customized to meet customer needs. SOCs can be wholly in-house, owned and operated by a business, or elements of a SOC can be contracted out to security vendors.
+
+Elements of a SOC:
++ People
+  + Tier 1 Alert Analyst
+  + Tier 2 Incident Responder
+  + Tier 3 Threat Hunter
+  + SOC Manager
++ Process : If a ticket cannot be resolved, the Cybersecurity Analyst will forward the ticket to a Tier 2 Incident Responder for deeper investigation and remediation. If the Incident Responder cannot resolve the ticket, it will be forwarded it to Tier 3 personnel with in-depth knowledge and threat hunting skills.
++ Technoligies
+  + SIEM (*Security Information Event Management system*): Used for collecting and filtering data, detecting and classifying threats, and analyzing and investigating threats.
+  + SOAR (*Security Orchestration Automation and Response*): Often paired with SIEMs as they have capabilities that complement each other. Similar to SIEMs but they also integrate threat intelligence and automating incident investigation and response workflows based on playbooks developed by the security team.
+ 
+| SOC Metrics | |
+| --- | --- |
+| Dwell Time | Time that threat actors have access to a network before they are detected, and their access is stopped. |
+| MTTD | Mean Time To Detect |
+| MTTR | Mean Time To Respond |
+| MTTC | Mean Time To Contain |
+| Time To Control | Time required to stop the spread of malware in the network. |
 
 ## 3. The Windows operating system
 
