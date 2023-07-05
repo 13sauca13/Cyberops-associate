@@ -404,7 +404,33 @@ The DNS consists of a hierarchy of generic top-level domains (gTLD) which consis
 At the next level of the DNS hierarchy are second-level domains. These are represented by a domain name that is followed by a top-level domain. Subdomains are found at the next level of the DNS hierarchy and represent some division of the second-level domain. Finally, a fourth level can represent a host in a subdomain.
 
 **COMPLETATR**
+`ipconfig /displaydns` is used to display all the DNS records in cache
 
 :computer: LAB - [Using wireshark to examine a udp dns capture](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/10.2.7%20Lab_Using%20wireshark%20to%20examine%20a%20udp%20dns%20capture.pdf)
 
 ### 10.3 NAT
+**COMPLETAR**
+
+[Use Local and Global NAT Terms](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/4606-8.html)
+
+### 10.4 File Transfer ans Sharing Services
++ **FTP**: Requires two connections, one for commands and replies (21), the other for the actual file transfer (20)
++ **TFTP**:  Is a simplified file transfer protocol that uses well-known UDP port number 69
++ **SMB**: erver Message Block (SMB) is a client/server file sharing protocol that describes the structure of shared network resources. It is a request-response protocol.
+
+:computer: LAB - [Using Wireshark to examine TCP and UDP captures](https://github.com/13sauca13/Cyberops-associate/blob/1629353f2bedad5b170fb26659703c69bdc503cf/Resources/Labs/10.4.3%20Lab_sing%20wireshark%20to%20examine%20tcp%20and%20udp%20captures.pdf)
+
+### 10.5 EMAIL
+Email supports three separate protocols for operation: Simple Mail Transfer Protocol (SMTP), Post Office Protocol (POP), and IMAP. The application layer process that sends mail uses SMTP. A client retrieves email using one of the two application layer protocols: POP or IMAP.
++ **SMTP**: SMTP message formats require a message header and a message body. While the message body can contain any amount of text, the message header must have a properly formatted recipient email address and a sender address.
+
+**COMPLETAR**
+
+### 10.6 HTTP
+**COMPLETAR**
+
+:computer: LAB - [Using Wireshark to examine HTTP and HTTPS traffic](https://github.com/13sauca13/Cyberops-associate/blob/1c6820d8cb423e167fff8b30b60154a217a02378/Resources/Labs/10.6.7%20Lab_sing%20wireshark%20to%20examine%20http%20and%20https%20traffic.pdf)
+
+## 11. Network Communication Devices
+
+### 11.1 Network devices
