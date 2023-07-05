@@ -1,10 +1,9 @@
 # Cyberops-associate
-Notas del curso Cyberops Associate
 
 ## 1. The Danger
 
 ### 1.1 War stories
-:computer: LAB - [Installing the Virtual Machines](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.5%20Lab_Installing%20the%20virtual%20machines.pdf)
+:computer: LAB - [Installing the Virtual Machines](https://github.com/13sauca13/Cyberops-associate/blob/d12192f28574fa7a56a9b230b7290bb7acc8e2ad/Resources/Labs/1.1.5%20Lab_Installing%20the%20virtual%20machines.pdf)
 
 :memo: LAB - [Cybersecurity Case Studies](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.6%20Lab_Cybersecurity%20case%20studies.pdf)
 
@@ -389,3 +388,20 @@ To close a connection, the Finish (FIN) control flag must be set in the segment 
 **CONTINUAR**
 
 :computer: LAB - [Exploring NMAP](https://github.com/13sauca13/Cyberops-associate/blob/0d3cb8f6b91b76422aba17737c105381ee73372a/9.%20The%20Transport%20Layer/9.3.8%20Lab_Exploring%20nmap.pdf)
+
+## 10. Network Services
+
+### 10.1 DHCP
+![DHCP Operation](https://github.com/13sauca13/Cyberops-associate/blob/4e623ca4a8b7ffe5b871e34c6a7a1f6b068ae8c2/Resources/DHCP%20Operation.png)
+1. The client broadcasts a DHCP discover (DHCPDISCOVER) message to identify any available DHCP servers on the network. A DHCP server replies with a DHCP offer (DHCPOFFER) message, which offers a lease to the client. The offer message contains the IPv4 address and subnet mask to be assigned, the IPv4 address of the DNS server, and the IPv4 address of the default gateway. The lease offer also includes the duration of the lease.
+2. The client may receive multiple DHCPOFFER messages if there is more than one DHCP server on the local network. Therefore, it must choose between them, and sends a DHCP request (DHCPREQUEST) message that identifies the explicit server and lease offer that the client is accepting. A client may also choose to request an address that it had previously been allocated by the server.
+3. The server returns a DHCP acknowledgment (DHCPACK) message that acknowledges to the client that the lease has been finalized. If the offer is no longer valid, then the selected server responds with a DHCP negative acknowledgment (DHCPNAK) message. If a DHCPNAK message is returned, then the selection process must begin again with a new DHCPDISCOVER message being transmitted. After the client has the lease, it must be renewed prior to the lease expiration through another DHCPREQUEST message.
+
+**DHCPv4 messages that are sent from the client use UDP source port 68 and destination port 67. DHCPv4 messages sent from the server to the client use UDP source port 67 and destination port 68.**
+
+### 10.2 DNS
+The DNS consists of a hierarchy of generic top-level domains (gTLD) which consist of .com, .net, .org, .gov, .edu, and numerous country-level domains, such as .br (Brazil), .es (Spain), .uk (United Kingdom), etc.
+At the next level of the DNS hierarchy are second-level domains. These are represented by a domain name that is followed by a top-level domain. Subdomains are found at the next level of the DNS hierarchy and represent some division of the second-level domain. Finally, a fourth level can represent a host in a subdomain.
+
+**COMPLETATR**
+
