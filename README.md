@@ -5,7 +5,7 @@
 ### 1.1 War stories
 :computer: LAB - [Installing the Virtual Machines](https://github.com/13sauca13/Cyberops-associate/blob/d12192f28574fa7a56a9b230b7290bb7acc8e2ad/Resources/Labs/1.1.5%20Lab_Installing%20the%20virtual%20machines.pdf)
 
-:memo: LAB - [Cybersecurity Case Studies](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.6%20Lab_Cybersecurity%20case%20studies.pdf)
+:memo: LAB - [Cybersecurity Case Studies](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/1.1.6%20Lab_Cybersecurity%20case%20studies.pdf)
 
 ### 1.2 Threat Actors
 Threat actors are individuals or groups of individuals who perform cyberattacks.
@@ -14,7 +14,7 @@ Threat actors are individuals or groups of individuals who perform cyberattacks.
 + Financial Gain
 + Trade secrets and global politics
 
-:memo: LAB - [Learning the details of attacks](https://github.com/13sauca13/Cyberops-associate/blob/273d62bb4bb4cb75ab18bfca48f4124c31b55ef0/1.%20The%20Danger/1.2.3%20Lab_Learning%20the%20Details%20of%20Attacks.pdf)
+:memo: LAB - [Learning the details of attacks](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/1.2.3%20Lab_Learning%20the%20Details%20of%20Attacks.pdf)
 
 ### 1.3 Threat impact
 Personally identifiable information (PII) is any information that can be used to positively identify an individual.
@@ -22,7 +22,7 @@ Two subsets of PII are:
 + PHI (*Personal Health Information*)
 + PSI (*Personal Security Information*)
 
-:memo: LAB - [Visualizing the black hats](https://github.com/13sauca13/Cyberops-associate/blob/6566e92e7b5ff70cf89d64a93a9bd8681dd13df7/1.%20The%20Danger/1.3.4%20Lab_Visualizing%20the%20Black%20Hats.pdf)
+:memo: LAB - [Visualizing the black hats](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/1.3.4%20Lab_Visualizing%20the%20Black%20Hats.pdf)
 
 ## 2. Fighters in the war against cybercrime
 
@@ -93,9 +93,9 @@ Fabrice Bellard has created JSLinux which allows an emulated version of Linux to
 
 > In Linux, everything is treated as a file. This includes the memory, the disks, the monitor, and the directories. For example, from the operating system standpoint, showing information on the display means to write to the file that represents the display device. It should be no surprise that the computer itself is configured through files. Known as configuration files, they are usually text files used to store adjustments and settings for specific applications or services. Practically everything in Linux relies on configuration files to work. Some services have not one, but several configuration files.
 
-:computer: LAB - [Working with Text Files in the CLI](https://github.com/13sauca13/Cyberops-associate/blob/5ca05d054f166ffd4dbb1c2012d1aa40390bc565/4.%20Linux%20overview/4.2.6%20Lab_Working%20with%20text%20files%20in%20the%20cli.pdf)
+:computer: LAB - [Working with Text Files in the CLI](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/4.2.6%20Lab_Working%20with%20text%20files%20in%20the%20cli.pdf)
 
-:computer: LAB - [Getting Familiar with the Linux Shell](https://github.com/13sauca13/Cyberops-associate/blob/5ca05d054f166ffd4dbb1c2012d1aa40390bc565/4.%20Linux%20overview/4.2.7%20Lab_Getting%20familiar%20with%20the%20linux%20shell.pdf)
+:computer: LAB - [Getting Familiar with the Linux Shell](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/4.2.7%20Lab_Getting%20familiar%20with%20the%20linux%20shell.pdf)
 
 ### 4.3 Linux Servers and Clients
 For communications we are all time using **IP+Port=Socket** so clients can access server's resources.
@@ -115,7 +115,7 @@ For communications we are all time using **IP+Port=Socket** so clients can acces
 | IMAP | *143* |
 | SNMP | *161/162* |
  
-  :computer: LAB - [Linux servers](https://github.com/13sauca13/Cyberops-associate/blob/45154c5fe8019aab10919e03edcba705fff72c43/4.%20Linux%20overview/4.3.4%20Lab_Linux%20servers.pdf)
+:computer: LAB - [Linux servers](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/4.3.4%20Lab_Linux%20servers.pdf)
 
 ### 4.4 Basic Server Administration
 Services are managed using configuration files. When the service starts, it looks for its configuration files, loads them into memory, and adjusts itself according to the settings in the files. Configuration file modifications often require restarting the service before the changes take effect.
@@ -150,7 +150,7 @@ In Linux, log files can be categorized as:
 | /var/log/cron | |
 | /var/log/mysqld.log *or* /var/log/mysql.log | |
 
-:computer: LAB - [Locating Log Files](https://github.com/13sauca13/Cyberops-associate/blob/cc25e3e5e08d598dab6e952b4c27fd441b519d17/4.%20Linux%20overview/4.4.4%20Lab_Locating%20log%20files.pdf)
+:computer: LAB - [Locating Log Files](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/4.4.4%20Lab_Locating%20log%20files.pdf)
 
 ### 4.5 The Linux File System
 There are many different kinds of file systems, varying in properties of speed, flexibility, security, size, structure, logic and more. It is up to the administrator to decide which file system type best suits the operating system and the files it will store.
@@ -171,7 +171,7 @@ Mounting is the term used for the process of assigning a directory to a partitio
 
 **ANADIR LO QUE FALTA**
 
-:computer: LAB - [Navigating the Linux Filesystem and Permission Settings](https://github.com/13sauca13/Cyberops-associate/blob/8ea1bb80b1d3cebe20a0eda2284e9cf7d281aa1c/4.%20Linux%20overview/4.5.4%20Lab_Navigating%20the%20linux%20filesystem%20and%20permission%20settings.pdf)
+:computer: LAB - [Navigating the Linux Filesystem and Permission Settings](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/4.5.4%20Lab_Navigating%20the%20linux%20filesystem%20and%20permission%20settings.pdf)
 
 > **Rootkit** is a clandestine computer program designed to provide continued privileged access to a computer while actively hiding its presence. It can "hijack" commands changing the way they behave. `chkrootkit` is a shell script that checks system binaries for rootkit modification.
 
@@ -261,7 +261,7 @@ The form that a piece of data takes at any layer is called a *protocol data unit
 | Data Link | **Frame** | Physical Address |
 | Physical | **Bits** | |
 
-:computer: LAB - [Introduction to Wireshark](https://github.com/13sauca13/Cyberops-associate/blob/fe5b88f0206eb9980a25cfd9a8eca68b575ae9f6/5.%20Network%20protocols/5.3.7%20Lab_Introduction%20to%20wireshark.pdf)
+:computer: LAB - [Introduction to Wireshark](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/5.3.7%20Lab_Introduction%20to%20wireshark.pdf)
 
 ## 6. Ethernet and Internet Protocol (IP)
 
@@ -347,7 +347,7 @@ ARP is what you need to map IPv4 addresses to MAC addresses, it provides two bas
 + Resolving IPv4 addresses to MAC addresses
 + Maintaining a table of IPv4 to MAC address mappings
 
-:computer: LAB - [Using Wireshark to Examine Ethernet Frames](https://github.com/13sauca13/Cyberops-associate/blob/2db3d276b8ec86645edeac36f8dfef2632eea249/8.%20Address%20resolution%20protocol/8.2.8%20Lab_Using%20wireshark%20to%20examine%20ethernet%20frames.pdf)
+:computer: LAB - [Using Wireshark to Examine Ethernet Frames](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/8.2.8%20Lab_Using%20wireshark%20to%20examine%20ethernet%20frames.pdf)
 
 ### 8.3 ARP Issues
 
@@ -381,18 +381,18 @@ To close a connection, the Finish (FIN) control flag must be set in the segment 
 3. **FIN**: The server sends a FIN to the client to terminate the server-to-client session.
 4. **ACK**: The client responds with an ACK to acknowledge the FIN from the server.
 
-:computer: LAB - [Using wireshark to observe the tcp 3 way handshake](https://github.com/13sauca13/Cyberops-associate/blob/e65d97d91453578ff76c677090f779826ac4504d/9.%20The%20Transport%20Layer/9.2.6%20Lab_Using%20wireshark%20to%20observe%20the%20tcp%203%20way%20handshake.pdf)
+:computer: LAB - [Using wireshark to observe the tcp 3 way handshake](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/9.2.6%20Lab_Using%20wireshark%20to%20observe%20the%20tcp%203%20way%20handshake.pdf)
 
 ### 9.3 Transport Layer Reliability
 
 **CONTINUAR**
 
-:computer: LAB - [Exploring NMAP](https://github.com/13sauca13/Cyberops-associate/blob/0d3cb8f6b91b76422aba17737c105381ee73372a/9.%20The%20Transport%20Layer/9.3.8%20Lab_Exploring%20nmap.pdf)
+:computer: LAB - [Exploring NMAP](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/9.3.8%20Lab_Exploring%20nmap.pdf)
 
 ## 10. Network Services
 
 ### 10.1 DHCP
-![DHCP Operation](https://github.com/13sauca13/Cyberops-associate/blob/4e623ca4a8b7ffe5b871e34c6a7a1f6b068ae8c2/Resources/DHCP%20Operation.png)
+![DHCP Operation](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Pictures/DHCP%20Operation.png)
 1. The client broadcasts a DHCP discover (DHCPDISCOVER) message to identify any available DHCP servers on the network. A DHCP server replies with a DHCP offer (DHCPOFFER) message, which offers a lease to the client. The offer message contains the IPv4 address and subnet mask to be assigned, the IPv4 address of the DNS server, and the IPv4 address of the default gateway. The lease offer also includes the duration of the lease.
 2. The client may receive multiple DHCPOFFER messages if there is more than one DHCP server on the local network. Therefore, it must choose between them, and sends a DHCP request (DHCPREQUEST) message that identifies the explicit server and lease offer that the client is accepting. A client may also choose to request an address that it had previously been allocated by the server.
 3. The server returns a DHCP acknowledgment (DHCPACK) message that acknowledges to the client that the lease has been finalized. If the offer is no longer valid, then the selected server responds with a DHCP negative acknowledgment (DHCPNAK) message. If a DHCPNAK message is returned, then the selection process must begin again with a new DHCPDISCOVER message being transmitted. After the client has the lease, it must be renewed prior to the lease expiration through another DHCPREQUEST message.
@@ -405,3 +405,6 @@ At the next level of the DNS hierarchy are second-level domains. These are repre
 
 **COMPLETATR**
 
+:computer: LAB - [Using wireshark to examine a udp dns capture](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/10.2.7%20Lab_Using%20wireshark%20to%20examine%20a%20udp%20dns%20capture.pdf)
+
+### 10.3 NAT
