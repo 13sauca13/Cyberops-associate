@@ -343,3 +343,10 @@ Ethernet MAC addresses are used to deliver the data link frame with the encapsul
 + If the destination IP address is on the same network, the destination MAC address will be that of the destination device.
 + When the destination IP address is on a remote network, the destination MAC address will be the address of the host’s default gateway.
 
+### 8.2 ARP
+ARP is what you need to map IPv4 addresses to MAC addresses, it provides two basic functions:
++ Resolving IPv4 addresses to MAC addresses
++ Maintaining a table of IPv4 to MAC address mappings
+
+:computer: LAB - [Using Wireshark to Examine Ethernet Frames](https://github.com/13sauca13/Cyberops-associate/blob/2db3d276b8ec86645edeac36f8dfef2632eea249/8.%20Address%20resolution%20protocol/8.2.8%20Lab_Using%20wireshark%20to%20examine%20ethernet%20frames.pdf)
+
