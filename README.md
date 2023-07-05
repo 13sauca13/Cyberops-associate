@@ -6,7 +6,7 @@ Notas del curso Cyberops Associate
 ### 1.1 War stories
 :computer: LAB - [Installing the Virtual Machines](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.5%20Lab_Installing%20the%20virtual%20machines.pdf)
 
-:pencil: LAB - [Cybersecurity Case Studies](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.6%20Lab_Cybersecurity%20case%20studies.pdf)
+:memo: LAB - [Cybersecurity Case Studies](https://github.com/13sauca13/Cyberops-associate/blob/48879fb65d4482c2b97de8945f559186aadb28aa/1.%20The%20Danger/1.1.6%20Lab_Cybersecurity%20case%20studies.pdf)
 
 ### 1.2 Threat Actors
 Threat actors are individuals or groups of individuals who perform cyberattacks.
@@ -15,7 +15,7 @@ Threat actors are individuals or groups of individuals who perform cyberattacks.
 + Financial Gain
 + Trade secrets and global politics
 
-:pencil: LAB - Learning the details of attacks
+:memo: LAB - [Learning the details of attacks](https://github.com/13sauca13/Cyberops-associate/blob/273d62bb4bb4cb75ab18bfca48f4124c31b55ef0/1.%20The%20Danger/1.2.3%20Lab_Learning%20the%20Details%20of%20Attacks.pdf)
 
 ### 1.3 Threat impact
 Personally identifiable information (PII) is any information that can be used to positively identify an individual.
@@ -23,7 +23,7 @@ Two subsets of PII are:
 + PHI (*Personal Health Information*)
 + PSI (*Personal Security Information*)
 
-:pencil: LAB - [Visualizing the black hats](https://github.com/13sauca13/Cyberops-associate/blob/6566e92e7b5ff70cf89d64a93a9bd8681dd13df7/1.%20The%20Danger/1.3.4%20Lab_Visualizing%20the%20Black%20Hats.pdf)
+:memo: LAB - [Visualizing the black hats](https://github.com/13sauca13/Cyberops-associate/blob/6566e92e7b5ff70cf89d64a93a9bd8681dd13df7/1.%20The%20Danger/1.3.4%20Lab_Visualizing%20the%20Black%20Hats.pdf)
 
 ## 2. Fighters in the war against cybercrime
 
@@ -334,3 +334,12 @@ These are some common message codes:
 As you will see later in the course, a cybersecurity analyst knows that the optional ICMP payload field can be used in an attack vector to exfiltrate data.
 
 :memo: 
+
+## 8. Address Resolution Protocol
+
+### 8.1 MAC and IP
+IP addresses are used to identify the address of the original source device and the final destination device. The destination IP address may be on the same IP network as the source or may be on a remote network.
+Ethernet MAC addresses are used to deliver the data link frame with the encapsulated IP packet from one NIC to another NIC on the same network.
++ If the destination IP address is on the same network, the destination MAC address will be that of the destination device.
++ When the destination IP address is on a remote network, the destination MAC address will be the address of the host’s default gateway.
+
