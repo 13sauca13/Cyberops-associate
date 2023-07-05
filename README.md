@@ -359,3 +359,33 @@ ARP is what you need to map IPv4 addresses to MAC addresses, it provides two bas
 The transport layer includes two protocols:
 + Transmission Control Protocol (TCP)
 + User Datagram Protocol (UDP)
+
+| | TCP | UDP |
+| --- | --- | ---|
+| Header | 20 Bytes | 8 bytes |
+| Data division | Segments | Datagrams |
+
+**CONTINUAR**
+
+### 9.2 Transport Layer Session Establishment
+In TCP the client request a service to the server using the port used by the server and dynamically generating a source port number.
+The host client establishes the connection with the server using the three-way handshake process:
+1. **SYN**: The initiating client requests a client-to-server communication session with the server.
+2. **ACK and SYN**: The server acknowledges the client-to-server communication session and requests a server-to-client communication session.
+3. **ACK**: The initiating client acknowledges the server-to-client communication session.
+
+>ACK contains the numbre of **THE NEXT EXPECTED PACKET**, not the one received
+
+To close a connection, the Finish (FIN) control flag must be set in the segment header. To end each one-way TCP session, a two-way handshake, consisting of a FIN segment and an Acknowledgment (ACK) segment, is used. Therefore, to terminate a single conversation supported by TCP, four exchanges are needed to end both sessions.
+1. **FIN**: When the client has no more data to send in the stream, it sends a segment with the FIN flag set.
+2. **ACK**: The server sends an ACK to acknowledge the receipt of the FIN to terminate the session from client to server.
+3. **FIN**: The server sends a FIN to the client to terminate the server-to-client session.
+4. **ACK**: The client responds with an ACK to acknowledge the FIN from the server.
+
+:computer: LAB - [Using wireshark to observe the tcp 3 way handshake](https://github.com/13sauca13/Cyberops-associate/blob/e65d97d91453578ff76c677090f779826ac4504d/9.%20The%20Transport%20Layer/9.2.6%20Lab_Using%20wireshark%20to%20observe%20the%20tcp%203%20way%20handshake.pdf)
+
+### 9.3 Transport Layer Reliability
+
+**CONTINUAR**
+
+:computer: LAB - [Exploring NMAP](https://github.com/13sauca13/Cyberops-associate/blob/0d3cb8f6b91b76422aba17737c105381ee73372a/9.%20The%20Transport%20Layer/9.3.8%20Lab_Exploring%20nmap.pdf)
