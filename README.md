@@ -434,3 +434,8 @@ Email supports three separate protocols for operation: Simple Mail Transfer Prot
 ## 11. Network Communication Devices
 
 ### 11.1 Network devices
+**COMPLETAR**
+
+### 11.2 Wireless Communications
+**COMPLETAR**
+
