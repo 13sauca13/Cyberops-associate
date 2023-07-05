@@ -411,7 +411,7 @@ At the next level of the DNS hierarchy are second-level domains. These are repre
 ### 10.3 NAT
 **COMPLETAR**
 
-[Use Local and Global NAT Terms](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/4606-8.html)
+:eyes:[Use Local and Global NAT Terms](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/4606-8.html)
 
 ### 10.4 File Transfer ans Sharing Services
 + **FTP**: Requires two connections, one for commands and replies (21), the other for the actual file transfer (20)
