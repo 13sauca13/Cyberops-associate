@@ -333,6 +333,7 @@ These are some common message codes:
 The optional ICMP payload field can be used in an attack vector to exfiltrate data.
 
 :memo: LAB - [Verify IPv4 and IPv6 Addressing](https://github.com/13sauca13/Cyberops-associate/blob/8a48a9c6a5f2f361b5fcfadddfb875118d271e73/Resources/Labs/7.2.8%20Packet%20tracer_Verify%20ipv4%20and%20ipv6%20addressing.pdf)
+
 :paperclip: LAB - [.pka file Verify IPv4 and IPv6 Addressing](https://github.com/13sauca13/Cyberops-associate/blob/8a48a9c6a5f2f361b5fcfadddfb875118d271e73/Resources/Labs/7.2.8-packet-tracer---verify-ipv4-and-ipv6-addressing.pka)
 
 ## 8. Address Resolution Protocol
