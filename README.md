@@ -331,7 +331,7 @@ These are some common message codes:
 + 8 – Echo request (for ping)
 + 11 – Time Exceeded (TTL became 0)
 
-As you will see later in the course, a cybersecurity analyst knows that the optional ICMP payload field can be used in an attack vector to exfiltrate data.
+The optional ICMP payload field can be used in an attack vector to exfiltrate data.
 
 :memo: 
 
@@ -350,3 +350,12 @@ ARP is what you need to map IPv4 addresses to MAC addresses, it provides two bas
 
 :computer: LAB - [Using Wireshark to Examine Ethernet Frames](https://github.com/13sauca13/Cyberops-associate/blob/2db3d276b8ec86645edeac36f8dfef2632eea249/8.%20Address%20resolution%20protocol/8.2.8%20Lab_Using%20wireshark%20to%20examine%20ethernet%20frames.pdf)
 
+### 8.3 ARP Issues
+
+
+## 9. The Transport Layer
+
+### 9.1 Transport Layer Characteristics
+The transport layer includes two protocols:
++ Transmission Control Protocol (TCP)
++ User Datagram Protocol (UDP)
