@@ -509,3 +509,118 @@ Firewall Types:
 #### NTP
 #### AAA Servers
 #### VPN
+
+## 13. Attackers and their tools
+
+### 13.1 Who is attacking our networks?
+**COMPLETAR**
+
+### 13.2 Threat actor tools
+Common network penetration tools:
+
+| Categories of tols | Description |
+| --- | --- |
+| Password crackers | |Used to crack or remove passwords (eg: John the ripper, Ophcrack) |
+| Wireless hacking tools | Used to hack into a wireless network to detect security vulnerabilities (eg: Aircrack-ng, Kismet) |
+| Network scanning and hacking tools | Used to probe network devices for open TCP ar UDP ports (eg: Nmap, SuperScan, masscan) |
+| Packet crafting tools | Used to probe and test firewalls robustness (eg: Hping, Scapy) |
+| Packet sniffers | Used to capture and analyza network packets (eg: Wireshark, Tcpdump) |
+| Rootkit detectors | |
+| Fuzzers to search vulnerabilities | |
+| Forensics tools | To sniff out any trace of evidence in a particular computer system (eg: Sleuth Kit, Helix) |
+| Debuggers | Reverse engineer binary files whe writing exploits an to analyze malware (eg: GDB, WinDbg) |
+| Hacking operating systemas | Specially designed operating systems preloaded with tools for hacking (eg: Kali Linux, SELinux) |
+| encryption tools | They use algorithm schemes to encode the data (VeraCrypt, CipherShed) |
+| vulnerability exploitation tools | Identify whether a remote host is vulnerable to a security attack. (eg: Metasploit, Core Impact) |
+| vulnerability scanners | Scan a network or system to identify open ports. They can also be used to scan for known vulnerabilities (eg: Nipper, Securia PSI) |
+
+#### Categories of attacks
+| Category of attack | Description |
+| --- | --- |
+| eavesdropping attack | |
+| data modification attack | |
+| IP address spoofing attack | |
+| password-based attacks | |
+| denial-of-service (DoS) attack | |
+| man-in-the-middle attack (MiTM) | |
+| compromised key attack | |
+| sniffer attack | |
+
+## 14. Common threats and attacks
+
+### 14.1 Malware
++ **Viruses**: A type of malware that spreads by inserting a copy of itself into another program.
++ **Trojan Horses**: Software that appears to be legitimate, but it contains malicious code which exploits the privileges of the user that runs it. They can be classified:
+  + Remote-access
+  + Data-sending
+  + Destructive
+  + Proxy
+  + FTP
+  + Security software disabler
+  + Denial of Service (DoS)
+  + Keylogger
++ **Worms**: Similar to viruses because they replicate and can cause the same type of damage. Specifically, worms replicate themselves by independently exploiting vulnerabilities in networks. Whereas a virus requires a host program to run, worms can run by themselves. Other than the initial infection, they no longer require user participation. Most worm attacks consist of three components:
+  + Enabling vulnerability
+  + Propagation mechanism
+  + Payload
++ **Ransomware**: Malware that denies access to the infected computer system or its data. The cybercriminals then demand payment to release the computer system.
++ **Spyware**: Used to gather information about a user and send the information to another entity without the user’s consent. Spyware can be a system monitor, Trojan horse, Adware, tracking cookies, and key loggers.
++ **Adware**: Displays annoying pop-ups to generate revenue for its author. The malware may analyze user interests by tracking the websites visited.
++ **Scareware**: Scam software which uses social engineering to shock or induce anxiety by creating the perception of a threat.
++ **Phishing**: Attempts to convince people to divulge sensitive information.
++ **Rootkits**: Installed on a compromised system.
+
+:memo: LAB - [Anatomy of malware](https://github.com/13sauca13/Cyberops-associate/blob/07106ea668be59246fcf7ce18189a0d83f1a6b3c/Resources/Labs/14.1.11%20Lab_Anatomy%20of%20malware.pdf)
+
+### 14.2 Common network attacks - Reconnaissance, Access and Social Engineering
++ **Reconnaissance Attacks**: Threat actors use reconnaissance (or recon) attacks to do unauthorized discovery and mapping of systems, services, or vulnerabilities. Recon attacks precede access attacks or DoS attacks.
++ **Access Attacks**: Access attacks exploit known vulnerabilities in authentication services, FTP services, and web services. The purpose of this type of attack is to gain entry to web accounts, confidential databases, and other sensitive information. Threat actors use access attacks on network devices and computers to retrieve data, gain access, or to escalate access privileges to administrator status.
+  + Password attacks
+  + Spofing attacks
+  + Trust exploitations
+  + Port redirections
+  + Man-in-the-middle
+  + Buffer overflow
++ **Social engineering attacks**: Social engineering is an access attack that attempts to manipulate individuals into performing actions or divulging confidential information. [The Social Engineering Toolkit (SET)](https://github.com/trustedsec/social-engineer-toolkit) was designed to help white hat hackers and other network security professionals create social engineering attacks to test their own networks. It is a set of menu-based tools that help launch social engineering attacks.
+
+:memo: LAB - [Social Engineering](https://github.com/13sauca13/Cyberops-associate/blob/a428ecd004c5995fb19a6b3bdfa63658b435e856/Resources/Labs/14.2.8%20Lab_Social%20engineering.pdf)
+
+### 14.3 Network attacks - Denial of Service, Buffer Overflows and Evasion
+:eyes: [Live botnet threats worlwide](https://www.spamhaus.com/threat-map/)
++ **DoS and DDos**: Creates some sort of interruption of network services to users, devices, or applications. There are two major types of DoS attacks:
+  + Overwhelming Quantity of Traffic
+  + Maliciously Formatted Packets
++ **Buffer overflow**: Exploiting the buffer memory by overwhelming it with unexpected values usually renders the system inoperable, creating a DoS attack.
+> It is estimated that one third of malicious attacks are the result of buffer overflows.
+
+**Evasion methods**
+| Evasion method | Description |
+| --- | --- |
+| Encryption and tunneling | |
+| Resource exhaustion | |
+| Traffic fragmentation | |
+| Protocol-level misinterpretation | |
+| Traffic substitution | |
+| Traffic insertion | |
+| Pivoting | |
+| Rootkits | |
+| Proxies | |
+
+## 15. Network monitoring tools
+
+:computer: LAB - [What's going on](https://github.com/13sauca13/Cyberops-associate/blob/42e81f67617ab88d2c2d9d231c580fa1352042fb/Resources/Labs/15.0.3%20Class%20activity_What-s%20going%20on.pdf)
+
+### 15.1 Introduction to Network Monitoring
+To determine normal network behavior, network monitoring must be implemented. Various tools are used to help discover normal network behavior including IDS, packet analyzers, SNMP, NetFlow, and others.
+Some of these tools require captured network data. There are two common methods used to capture traffic and send it to network monitoring devices:
++ **Network taps, sometimes known as test access points (TAPs)**: A network tap is typically a passive splitting device implemented inline between a device of interest and the network. A tap forwards all traffic, including physical layer errors, to an analysis device while also allowing the traffic to reach its intended destination.
++ **Traffic mirroring using Switch Port Analyzer (SPAN) or other port mirroring.**: Port mirroring enables the switch to copy frames that are received on one or more ports to a Switch Port Analyzer (SPAN) port that is connected to an analysis device.
+
+### 15.2 Introduction to Network Mnitoring Tools
+#### Network Protocol Analyzers
+#### NetFlow
+#### SIEM and SOAR
+
+:memo: LAB -[Logging Network Activity](https://github.com/13sauca13/Cyberops-associate/blob/78e7f639f6413919f1a8a75ebb511784621bd27d/Resources/Labs/15.2.7%20Packet%20tracer_Logging-network-activity.pdf)
+
+:paperclip: LAB - [Logging Network Activity](https://github.com/13sauca13/Cyberops-associate/blob/78e7f639f6413919f1a8a75ebb511784621bd27d/Resources/Labs/15.2.7-packet-tracer---logging-network-activity.pka)
