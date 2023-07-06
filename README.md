@@ -24,6 +24,8 @@ Two subsets of PII are:
 
 :memo: LAB - [Visualizing the black hats](https://github.com/13sauca13/Cyberops-associate/blob/6c1260c50021dc0e1110f6ee6dccdf5d4af90fe7/Resources/Labs/1.3.4%20Lab_Visualizing%20the%20Black%20Hats.pdf)
 
+:movie_camera: [Zero Days](https://archive.org/details/zero.-days.-2016.720p)
+
 ## 2. Fighters in the war against cybercrime
 
 ### 2.1 The modern Security Operations Center
@@ -47,6 +49,8 @@ Elements of a SOC:
 | MTTR | Mean Time To Respond |
 | MTTC | Mean Time To Contain |
 | Time To Control | Time required to stop the spread of malware in the network. |
+
+:eyes: [Splunk](https://www.splunk.com/), [Alien Vault](https://otx.alienvault.com/), [Security Onion](https://securityonionsolutions.com/)
 
 ## 3. The Windows operating system
 
@@ -441,3 +445,67 @@ Email supports three separate protocols for operation: Simple Mail Transfer Prot
 ### 11.2 Wireless Communications
 **COMPLETAR**
 
+## 12. Network Security Infrastructure
+
+### 12.1 Network Topologies
+Topology diagrams:
++ Physical Topology Diagrams
++ Logical Topology Diagrams
+
+LAN networks are designed using a "Three-Layer Model" including Access Layer, Distribution Layer and Core Layer.
+The access layer provides endpoints and users direct access to the network. The distribution layer aggregates access layers and provides connectivity to services. Finally, the core layer provides connectivity between distribution layers for large LAN environments.
+Some smaller enterprise networks may implement a two-tier hierarchical design. In a two-tier hierarchical design, the core and distribution layers are collapsed into one layer.
+
+Common security architectures:
++ **Private and public**: Traffic from the private network is permitted and inspected. Only traffic returning from the public network asociated with thaffic originated from the private network is permitted.
++ **Demilitarized Zones (DMZ)**: Is firewall design where there is typically one inside interface connected to the private network, one outside interface connected to the public network, and one DMZ interface.
+  + Traffic originating from the private network is inspected as it travels toward the public or DMZ network. This traffic is permitted with little or no restriction. Inspected traffic returning from the DMZ or public network to the private network is permitted.
+  + Traffic originating from the DMZ network and traveling to the private network is usually blocked.
+  + Traffic originating from the DMZ network and traveling to the public network is selectively permitted based on service requirements.
+  + Traffic originating from the public network and traveling toward the DMZ is selectively permitted and inspected. This type of traffic is typically email, DNS, HTTP, or HTTPS traffic. Return traffic from the DMZ to the public network is dynamically permitted.
+  + Traffic originating from the public network and traveling to the private network is blocked.
++ **Zone-Based (ZPF)**: A zone is a group of one or more interfaces that have similar functions or features. By default, the traffic between interfaces in the same zone is not subject to any policy and passes freely. However, all zone-to-zone traffic is blocked. In order to permit traffic between zones, a policy allowing or inspecting traffic must be configured.
+
+:memo: LAB - [Identify Packet Flow](https://github.com/13sauca13/Cyberops-associate/blob/483c46b2ecbda2d647af0eef82131766f56503ac/Resources/Labs/12.1.9%20Packet%20tracer_Identify%20packet%20flow.pdf)
+
+:paperclip: LAB - [Identify Packet Flow](https://github.com/13sauca13/Cyberops-associate/blob/483c46b2ecbda2d647af0eef82131766f56503ac/Resources/Labs/12.1.9-packet-tracer---identify-packet-flow.pka)
+
+:eyes: [MAC Address Table Flooding](https://en.wikipedia.org/wiki/MAC_flooding)
+
+### 12.2 Security Devices
+#### Firewalls
+A firewall is a system, or group of systems, that enforces an access control policy between networks.
+All firewalls share some common properties:
++ Firewalls are resistant to network attacks.
++ Firewalls are the only transit point between internal corporate networks and external networks because all traffic flows through the firewall.
++ Firewalls enforce the access control policy.
+
+Firewall Types:
++ **Packet filtering (Stateless)**: They are usually part of a router firewall, which permits or denies traffic based on Layer 3 and Layer 4 information.
++ **Stateful**: They are the most versatile and the most common firewall technologies in use. Stateful firewalls provide stateful packet filtering by using connection information maintained in a state table. Stateful filtering is a firewall architecture that is classified at the network layer. It also analyzes traffic at OSI Layer 4 and Layer 5.
++ **Application Gateway (Proxy firewall)**: Filters information at Layers 3, 4, 5, and 7 of the OSI reference model. Most of the firewall control and filtering is done in software.
++ **Next Generation Firewall (NGFW)**: Go beyond by prividing
+  + Integrated intrusion prevention
+  + Application awareness and control to see and block risky apps
+  + Upgrade paths to include future information feeds
+  + Techniques to address evolving security threats
+
+**COMPLETAR**
+
+#### Intrusion Prevention and Detection Devices
+
+**COPLETAR**
+
+### 12.3 Security Services
+#### ACLs
+
+:memo: LAB - [ACL Demonstration](https://github.com/13sauca13/Cyberops-associate/blob/92644f984a1f51f0ba6fc433b09fd50097c3d9ae/Resources/Labs/12.3.4%20Packet%20tracer_Acl%20demonstration.pdf)
+:paperclip: LAB - [ACL Demonstration](https://github.com/13sauca13/Cyberops-associate/blob/92644f984a1f51f0ba6fc433b09fd50097c3d9ae/Resources/Labs/12.3.4-packet-tracer---acl-demonstration.pka)
+
+#### SNMP
+#### Net Flow
+#### Port Mirroring
+#### Syslog Servers
+#### NTP
+#### AAA Servers
+#### VPN
