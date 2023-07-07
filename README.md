@@ -500,6 +500,7 @@ Firewall Types:
 #### ACLs
 
 :memo: LAB - [ACL Demonstration](https://github.com/13sauca13/Cyberops-associate/blob/92644f984a1f51f0ba6fc433b09fd50097c3d9ae/Resources/Labs/12.3.4%20Packet%20tracer_Acl%20demonstration.pdf)
+
 :paperclip: LAB - [ACL Demonstration](https://github.com/13sauca13/Cyberops-associate/blob/92644f984a1f51f0ba6fc433b09fd50097c3d9ae/Resources/Labs/12.3.4-packet-tracer---acl-demonstration.pka)
 
 #### SNMP
@@ -624,3 +625,25 @@ Some of these tools require captured network data. There are two common methods 
 :memo: LAB -[Logging Network Activity](https://github.com/13sauca13/Cyberops-associate/blob/78e7f639f6413919f1a8a75ebb511784621bd27d/Resources/Labs/15.2.7%20Packet%20tracer_Logging-network-activity.pdf)
 
 :paperclip: LAB - [Logging Network Activity](https://github.com/13sauca13/Cyberops-associate/blob/78e7f639f6413919f1a8a75ebb511784621bd27d/Resources/Labs/15.2.7-packet-tracer---logging-network-activity.pka)
+
+## 16. Attacking the Foundation
+
+### 16.1 IP PDU Details
+IP was designed as a Layer 3 connectionless protocol. It provides the necessary functions to deliver a packet from a source host to a destination host over an interconnected system of networks. The protocol was not designed to track and manage the flow of packets. These functions, if required, are performed primarily by TCP at Layer 4.
+
+#### IPv4
+| IPv4 Header Field | Descriptio |
+| --- | --- |
+| Version | Contains a 4-bit binary value set to 0100 that identifies this as an IPv4 packet. |
+| Internet Header length | A 4-bit field containing the length of the IP header. The minimum length of an IP header is 20 bytes. |
+| Differentiated Services or DiffServ (DS) | 8-bit field used to determine the priority of each packet. The six most significant bits of the DiffServ field are the Differentiated Services Code Point (DSCP). The last two bits are the Explicit Congestion Notification (ECN) bits. |
+| Total length | Specifies the length of the IP packet including the IP header and the user data. |
+| Identification, Flag, and Fragment offset | These fields are used to fragment and reassemble packets. |
+| Time-to-Live (TTL) | 8-bit binary value that is used to limit the lifetime of a packet. |
+| Protocol | Field is used to identify the next level protocol. |
+| Header checksum | Used to determine if any errors have been introduced during transmission. |
+| Source IPv4 Address | The source IPv4 address is always a unicast address. |
+| Destination IPv4 Address | the destination IPv4 address of the packet. |
+| Options and Padding | This is a field that varies in length from 0 to a multiple of 32 bits. |
+
+![IPv4 Packet Header](https://github.com/13sauca13/Cyberops-associate/blob/c3f4152d7471cb3cfe15b3ff1c4d2beed37f1785/Resources/Pictures/IPv4%20Packet%20Header.png)
