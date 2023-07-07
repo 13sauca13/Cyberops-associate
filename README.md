@@ -632,7 +632,7 @@ Some of these tools require captured network data. There are two common methods 
 IP was designed as a Layer 3 connectionless protocol. It provides the necessary functions to deliver a packet from a source host to a destination host over an interconnected system of networks. The protocol was not designed to track and manage the flow of packets. These functions, if required, are performed primarily by TCP at Layer 4.
 
 #### IPv4
-| IPv4 Header Field | Descriptio |
+| IPv4 Header Field | Description |
 | --- | --- |
 | Version | Contains a 4-bit binary value set to 0100 that identifies this as an IPv4 packet. |
 | Internet Header length | A 4-bit field containing the length of the IP header. The minimum length of an IP header is 20 bytes. |
@@ -647,3 +647,19 @@ IP was designed as a Layer 3 connectionless protocol. It provides the necessary 
 | Options and Padding | This is a field that varies in length from 0 to a multiple of 32 bits. |
 
 ![IPv4 Packet Header](https://github.com/13sauca13/Cyberops-associate/blob/c3f4152d7471cb3cfe15b3ff1c4d2beed37f1785/Resources/Pictures/IPv4%20Packet%20Header.png)
+
+#### IPv6
+| IPv6 Header Field | Description |
+| --- | --- |
+| Version | This field contains a 4-bit binary value set to 0110 that identifies this as an IPv6 packet. |
+| Traffic Class | This 8-bit field is equivalent to the IPv4 Differentiated Services (DS) field. |
+| Flow Label | This 20-bit field suggests that all packets with the same flow label receive the same type of handling by routers. |
+| Payload Length | This 16-bit field indicates the length of the data portion or payload of the IPv6 packet. |
+| Next Header | This 8-bit field is equivalent to the IPv4 Protocol field. |
+| Hop Limit | This 8-bit field replaces the IPv4 TTL field. |
+| Source IPv6 Address | 128-bit field identifies the IPv6 address of the sending host. |
+| Destination IPv6 Address | 128-bit field identifies the IPv6 address of the receiving host. |
+
+>An IPv6 packet may also contain extension headers (EH) that provide optional network layer information. Extension headers are optional and are placed between the IPv6 header and the payload. EHs are used for fragmentation, security, to support mobility, and more. Unlike IPv4, routers do not fragment routed IPv6 packets.
+
+![IPv6 Packet Header](https://github.com/13sauca13/Cyberops-associate/blob/25ef967bb806725a6aa8e78cd4c65efafcc46626/Resources/Pictures/IPv6%20Packet%20Header.png)
