@@ -674,3 +674,85 @@ IP was designed as a Layer 3 connectionless protocol. It provides the necessary 
   + Blind spoofing: The threat actor cannot see the traffic
 + **Man-in-the-middle attack (MiTM)**: Threat actors position themselves between a source and destination to transparently monitor, capture, and control the communication.
 + **Session hijacking**: Threat actors gain access to the physical network, and then use an MiTM attack to hijack a session.
+
+### 16.3 TCP and UDP Vulnerabilities
+
+:eyes: [QUIC Protocol](https://en.wikipedia.org/wiki/QUIC)
+ 
+#### TCP
+TCP segment information appears immediately after the IP header. There are 6 control bits for the TCP segment:
+| | |
+| --- | --- |
+| URG | Urgent pointer |
+| ACK | Acknowledgment |
+| PSH | Push function |
+| RST | Reset the connection |
+| SYN | Synchronize sequence numbers |
+| FIN | No more data from sender |
+
+TCP Attacks:
++ **TCP Syn Flood**: The TCP SYN Flood attack exploits the TCP three-way handshake. A threat actor continually sending TCP SYN session request packets with a randomly spoofed source IP address to a target. The target device replies with a TCP SYN-ACK packet to the spoofed IP address and waits for a TCP ACK packet. Those responses never arrive. Eventually the target host is overwhelmed with half-open TCP connections, and TCP services are denied to legitimate users.
++ **TCP Reset**: Used to terminate TCP communications between two hosts. TCP uses a four-way exchange to close the TCP connection using a pair of FIN and ACK segments from each TCP endpoint. A TCP connection terminates when it receives an RST bit. This is an abrupt way to tear down the TCP connection and inform the receiving host to immediately stop using the TCP connection. A threat actor could do a TCP reset attack and send a spoofed packet containing a TCP RST to one or both endpoints.
++ **TCP Session Hijacking**: The threat actor must spoof the IP address of one host, predict the next sequence number, and send an ACK to the other host. If successful, the threat actor could send, but not receive, data from the target device.
+
+#### UDP
+**COMPLETAR**
+
+## 17. Attacking waht we can do
+
+### 17.1 IP Services
+
+#### ARP
+Any client can send an unsolicited ARP Reply called a “gratuitous ARP.” This is often done when a device first boots up to inform all other devices on the local network of the new device’s MAC address. When a host sends a gratuitous ARP, other hosts on the subnet store the MAC address and IP address contained in the gratuitous ARP in their ARP tables.
+
+However, this feature of ARP also means that any host can claim to be the owner of any IP/MAC they choose.
+
++ **ARP Cache Poisoning**: ARP cache poisoning can be used to launch various man-in-the-middle attacks. (:eyes: [ARPSpoof](https://www.kali.org/tools/dsniff/#arpspoof)
+  1. ARP Request
+  2. ARP Reply
+  3. Spoofed Gratuitous ARP Replies
+
+#### DNS
++ **DNS Open Resolver**: A DNS open resolver answers queries from clients outside of its administrative domain.
++ **DNS Stealth**:
+  + Fast Flux: Threat actors use this technique to hide their phishing and malware delivery sites behind a quickly-changing network of compromised DNS hosts. The DNS IP addresses are continuously changed within minutes.
+  + Double IP Flux: Threat actors use this technique to rapidly change the hostname to IP address mappings and to also change the authoritative name server. This increases the difficulty of identifying the source of the attack.
+  + Domain Generation Algorithms: Threat actors use this technique in malware to randomly generate domain names that can then be used as rendezvous points to their command and control (C&C) servers. (:eyes: [SolarWinds Case](https://www.google.com/search?q=solarwinds+case&client=ubuntu-chr&hs=4t6&ei=M96nZOniAsejkdUP2_ug6Ak&ved=0ahUKEwipyPmxp_z_AhXHUaQEHds9CJ0Q4dUDCA8&uact=5&oq=solarwinds+case&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyBQgAEIAEMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjoKCAAQRxDWBBCwAzoKCAAQigUQsAMQQzoNCAAQ5AIQ1gQQsAMYAToVCC4QigUQxwEQ0QMQyAMQsAMQQxgCOhcILhCKBRDHARDRAxDIAxCwAxAKEEMYAjoPCC4QigUQyAMQsAMQQxgCOggIABCKBRCRAjoLCC4QrwEQxwEQgARKBAhBGABQ5glYmBBg3xdoAXABeACAAYYBiAGUBJIBAzIuM5gBAKABAcABAcgBE9oBBggBEAEYCdoBBggCEAEYCA&sclient=gws-wiz-serp))
++ **DNS Domain Shadowing**: Domain shadowing involves the threat actor gathering domain account credentials in order to silently create multiple sub-domains to be used during the attacks. These subdomains typically point to malicious servers without alerting the actual owner of the parent domain.
++ **DNS Tunneling**: Threat actors who use DNS tunneling place non-DNS traffic within DNS traffic. This method often circumvents security solutions. For the threat actor to use DNS tunneling, the different types of DNS records such as TXT, MX, SRV, NULL, A, or CNAME are altered.
+
+#### DHCP
+A DHCP spoofing attack occurs when a rogue DHCP server is connected to the network and provides false IP configuration parameters to legitimate clients. A rogue server can provide a variety of misleading information:
++ Wrong Default Gateway
++ Wrong DNS Server
++ Wrong IP Address
+
+:computer: LAB [Exploring DNS Traffic](https://github.com/13sauca13/Cyberops-associate/blob/f7a7a1e60cd5c9cabd3f649dce8bb81bee774854/Resources/Labs/17.1.7%20Lab_Exploring%20dns%20traffic.pdf)
+
+### 17.2 Enterprise Services
+
+#### HTTP and HTTPS
+Common HTTP Exploits:
++ **Malicious iFrames**: Threat actors compromise a webserver and modify web pages by adding HTML for the malicious iFrame. The HTML links to the threat actor’s webserver. In some instances, the iFrame page that is loaded consists of only a few pixels.
++ **HTTP 302 Cuishoning**: Threat actors use the 302 Found HTTP response status code to direct the user’s web browser to a new location. Threat actors often use legitimate HTTP functions such as HTTP redirects to carry out their attacks.
++ **Domain Shadowing**: The threat actor must first compromise a domain. Then, the threat actor must create multiple subdomains of that domain to be used for the attacks. Hijacked domain registration logins are then used to create the many subdomains needed. After these subdomains have been created, attackers can use them as they wish
+
+#### Email
++ **Attachment-based attacks**
++ **Email spoofing**
++ **Spam emailing**
++ **Open mail relay server**
++ **Homoglyphs**
+
+#### Web-Exposed Databases
++ **Code injection**
++ **SQL Injection**
+
+#### Clinet-side Scripting
++ **Cross-Site Scripting**: Cross-Site Scripting (XSS) is where web pages that are executed on the client-side, within their own web browser, are injected with malicious scripts.
+  + Sterod (persistent): This is permanently stored on the infected server and is received by all visitors to the infected page.
+  + Reflected (non-persistent): This only requires that the malicious script is located in a link and visitors must click the infected link to become infected.
+
+:computer: LAB - [Attacking a MySQL Database](https://github.com/13sauca13/Cyberops-associate/blob/c6f9ea3622460e5a2073113958584eb34a19d9c5/Resources/Labs/17.2.6%20Lab_Attacking%20a%20mysql%20database.pdf)
+
+:computer: LAB - [Reading Server Logs](https://github.com/13sauca13/Cyberops-associate/blob/c6f9ea3622460e5a2073113958584eb34a19d9c5/Resources/Labs/17.2.7%20Lab_Reading%20server%20logs.pdf)
