@@ -663,3 +663,14 @@ IP was designed as a Layer 3 connectionless protocol. It provides the necessary 
 >An IPv6 packet may also contain extension headers (EH) that provide optional network layer information. Extension headers are optional and are placed between the IPv6 header and the payload. EHs are used for fragmentation, security, to support mobility, and more. Unlike IPv4, routers do not fragment routed IPv6 packets.
 
 ![IPv6 Packet Header](https://github.com/13sauca13/Cyberops-associate/blob/25ef967bb806725a6aa8e78cd4c65efafcc46626/Resources/Pictures/IPv6%20Packet%20Header.png)
+
+### 16.2 IP Vulnerabilities
++ **ICMP Attacks**: Threat actors use Internet Control Message Protocol (ICMP) echo packets (pings) to discover subnets and hosts on a protected network, to generate DoS flood attacks, and to alter host routing tables.
+  + ICMP Flood
++ **Denial-of-Service (DoS)**: Threat actors attempt to prevent legitimate users from accessing information or services.
+  + Amplification and Reflection Attacks (:eyes: [smurf6](https://kalilinuxtutorials.com/smurf6/))
++ **Address spoofing attacks**: Similar to a DoS attack, but features a simultaneous, coordinated attack from multiple source machines.
+  + Non-blinding spoofing: The threat actor can see the traffic.
+  + Blind spoofing: The threat actor cannot see the traffic
++ **Man-in-the-middle attack (MiTM)**: Threat actors position themselves between a source and destination to transparently monitor, capture, and control the communication.
++ **Session hijacking**: Threat actors gain access to the physical network, and then use an MiTM attack to hijack a session.
