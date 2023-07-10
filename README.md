@@ -867,3 +867,21 @@ Hashes are used to verify and ensure data integrity. Hashing is based on a one-w
 To add origin authentication and integrity assurance, use a keyed-hash message authentication code (HMAC). HMAC uses an additional secret key as input to the hash function.
 
 :computer: LAB - [Hashing Things Out](https://github.com/13sauca13/Cyberops-associate/blob/3597348d9af9042e00a0046ee8e70d6d86ed5854/Resources/Labs/21.1.6%20Lab_Hashing%20things%20out.pdf)
+
+### 21.2 Confidentiality
+There are two classes of encryption used to provide data confidentiality; asymmetric and symmetric.
+
+#### Symetric Encryption
+Symmetric algorithms use the same pre-shared key to encrypt and decrypt data. A pre-shared key, also called a secret key, is known by the sender and receiver before any encrypted communications can take place. Data can be ciphered by block or stream.
+(eg: Data Encryption Standard (DES), 3DES (Triple DES), Advanced Encryption Standard (AES), Software-Optimized Encryption Algorithm (SEAL), Rivest Ciphers (RC) series algorithms)
+
+#### Asymetric Encryption
+Asymmetric algorithms use a public key and a private key. Both keys are capable of the encryption process, but the complementary paired key is required for decryption. The process is also reversible. Data that is encrypted with the public key requires the private key to decrypt.
+(eg: Internal Key Exchange (IKE), Secure Socket Layer (SSL), Secure Shell (SSH), Pretty Good Privacy (PGP)
+
+:computer: LAB - [Encrypting and decrypting data using openssl](https://github.com/13sauca13/Cyberops-associate/blob/bd3ef47baf095f3519f0c82ee6d22b5362e25628/Resources/Labs/21.2.10%20Lab_Encrypting%20and%20decrypting%20data%20using%20openssl.pdf)
+
+:computer: LAB - [Encrypting and Decrypting Data using a Hacker Tool](https://github.com/13sauca13/Cyberops-associate/blob/bd3ef47baf095f3519f0c82ee6d22b5362e25628/Resources/Labs/21.2.11%20Lab_Encrypting%20and%20decrypting%20data%20using%20a%20hacker%20tool.pdf)
+
+:computer: LAB - [Examining telnet and ssh in wireshark](https://github.com/13sauca13/Cyberops-associate/blob/bd3ef47baf095f3519f0c82ee6d22b5362e25628/Resources/Labs/21.2.12%20Lab_Examining%20telnet%20and%20ssh%20in%20wireshark.pdf)
+
