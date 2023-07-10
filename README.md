@@ -885,3 +885,18 @@ Asymmetric algorithms use a public key and a private key. Both keys are capable 
 
 :computer: LAB - [Examining telnet and ssh in wireshark](https://github.com/13sauca13/Cyberops-associate/blob/bd3ef47baf095f3519f0c82ee6d22b5362e25628/Resources/Labs/21.2.12%20Lab_Examining%20telnet%20and%20ssh%20in%20wireshark.pdf)
 
+### 21.3 Public Key Cryptography
+#### Digital Signatures
+Digital signatures are a mathematical technique used to provide authenticity, integrity, and nonrepudiation. Digital signatures have specific properties that enable entity authentication and data integrity. In addition, digital signatures provide nonrepudiation of the transaction. In other words, the digital signature serves as legal proof that the data exchange did take place. Digital signatures use asymmetric cryptography. They can be used for:
++ Code Signing: Digital signatures are commonly used to provide assurance of the authenticity and integrity of software code. Executable files are wrapped in a digitally signed envelope, which allows the end user to verify the signature before installing the software.
++ Digital Certificates: Digital signatures are used to verify that an artifact, such as a file or message, is sent from the verified individual.
+
+### 21.4 Authorities and the PKI Trust System
+**COMPLETAR**
+
+:computer: LAB - [Certificate Authority Stores](https://github.com/13sauca13/Cyberops-associate/blob/bd69fb9e27d4f0b8b084c1a30d56ad2dccbb5ba6/Resources/Labs/21.4.7%20Lab_Certificate%20authority%20stores.pdf)
+
+### 21.5 Applications and Impacts of Cryptography
++ PKI Applications
++ Encrypted Network Transactions
++ Encryption and Security Monitoring
