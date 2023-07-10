@@ -756,3 +756,114 @@ Common HTTP Exploits:
 :computer: LAB - [Attacking a MySQL Database](https://github.com/13sauca13/Cyberops-associate/blob/c6f9ea3622460e5a2073113958584eb34a19d9c5/Resources/Labs/17.2.6%20Lab_Attacking%20a%20mysql%20database.pdf)
 
 :computer: LAB - [Reading Server Logs](https://github.com/13sauca13/Cyberops-associate/blob/c6f9ea3622460e5a2073113958584eb34a19d9c5/Resources/Labs/17.2.7%20Lab_Reading%20server%20logs.pdf)
+
+## 18. Understanding Defense
+
+### 18.1 Defense-in-Depth
++ **Assets**: Anything of value to the organization that must be protected.
++ **Vulnerabilities**: A weakness in a system or its design that could be exploited by a threat actor.
++ **Threats**: Any potential danger to an asset.
+
+### 18.2 Security policies, regulations and standards
++ Business Policies: The policies define standards of correct behavior for the business and its employees. In networking, policies define the activities that are allowed on the network.
+  + Company policies: The rules of conduct and the responsibilities.
+  + Employee policies: Created and maintained by human resources staff to identify employee salary, pay schedule, employee benefits, work schedule, vacations, and more.
+  + Security policies: Set of security objectives for a company, define the rules of behavior for users and administrators, and specify system requirements.
+    + Identification and authentication policy
+    + Password policies
+    + Acceptable Use Policy (AUP)
+    + Remote access policy
+    + Network maintenance policy
+    + Incident handling procedures
+  + BYOD policies: This enables employees to use their own mobile devices to access company systems, software, networks, or information.
+ 
+## 19. Access Control
+ 
+### 19.1 Access Control Concepts
+:eyes: [Pass the hash hack](https://en.wikipedia.org/wiki/Pass_the_hash)
+
+| CIA :arrow_right: | Confidenciality | Integrity | Availability |
+| --- | --- | --- | --- |
+
+Zero trust is a comprehensive approach to securing all access across networks, applications, and environments. The principle of a zero trust approach is, “never trust, always verify.” It has three pillars:
++ Zero Trust for the **Workforce**: People who access.
++ Zero Trust for the **Workloads**: Applications that are running.
++ Zero Trust for the **Workplace**: Phiysical security.
+
+An organization must implement proper access controls to protect its network resources, information system resources, and information:
++ Discretionary access control (DAC)
++ Mandatory access control (MAC)
++ Role-based access control (RBAC)
++ Attribute-based access control (ABAC)
++ Rule-based access control (RBAC)
++ Time-based access control (TAC)
+
+### 19.2 AAA Usage and operation
+The Authentication, Authorization, and Accounting (AAA) protocol provides the necessary framework to enable scalable access security.
+
+| AAA Component | Description |
+| --- | --- |
+| **Authentication** | Users and administrators must prove that they are who they say they are. (AAA authentication provides a centralized way to control access to the network.) |
+| **Authorization** | Authorization services determine which resources the user can access and which operations the user is allowed to perform. |
+| **Accounting** | Accounting records what the user does, keeps track of how network resources are used. |
+
+#### AAA Authentication
+Cisco provides two common methods of implementing AAA services.
++ Local AAA Authentication
++ Server-based AAA Authentication
+
+Centralized AAA is more scalable and manageable than local AAA authentication and therefore, it is the preferred AAA implementation.
+
+A centralized AAA system may independently maintain databases for authentication, authorization, and accounting. It can leverage Active Directory or Lightweight Directory Access Protocol (LDAP) for user authentication and group membership, while maintaining its own authorization and accounting databases.
+Devices communicate with the centralized AAA server using either the **Remote Authentication Dial-In User Service (RADIUS)** or **Terminal Access Controller Access Control System (TACACS+)** protocols.
+
+#### AAA Accounting Logs
+AAA Accounting collects and reports usage data in AAA logs. These logs are useful for security auditing. The collected data might include the start and stop connection times, executed commands, number of packets, and number of bytes. There are several types of accounting information that can be collected (Network, Sonection, EXEC, System, Command, Resource...)
+
+## 20. Treat Intelligence
+
+### 20.1 Information Sources
+To effectively protect a network, security professionals must stay informed about threats and vulnerabilities as they evolve. This is through Cisco Cybersecurity Reports, Security Blogs and Podcasts an Network Intelligence Communities like:
+
+| Organization | Description |
+| --- | --- |
+| [SANS](https://www.sans.org/emea/) | SysAdmin, Audit, Network, Security (SANS) Institute |
+| Mitre | The Mitre Corporation maintains a list of common vulnerabilities and exposures (CVE) used by prominent security organizations. |
+| FIRST | Forum of Incident Response and Security Teams (FIRST) is a security organization that brings together a variety of computer security incident response teams from government, commercial, and educational organizations to foster cooperation and coordination in information sharing, incident prevention and rapid reaction. |
+| SecurityNewsWire | A security news portal that aggregates the latest breaking news pertaining to alerts, exploits, and vulnerabilities. |
+| (ISC)<sup>2</sup> | International Information Systems Security Certification Consortium (ISC2) provides vendor neutral education products and career services |
+| CIS | The Center for Internet Security (CIS) is a focal point for cyber threat prevention, protection, response, and recovery for state, local, tribal, and territorial (SLTT) governments through the Multi-State Information Sharing and Analysis Center (MS-ISAC). |
+
+### 20.2 Threat Intelligence Services
+Threat intelligence services allow the exchange of threat information such as vulnerabilities, indicators of compromise (IOC), and mitigation techniques.
++ [Cisco Talos](https://www.talosintelligence.com/)
++ Fire Eye (Now called [Trellix](https://www.trellix.com/en-us/index.html))
++ Automated Indicator Sharing (AIS)
++ [Common Vulnerabilities and Exposures (CVE) Database](https://cve.org/)
+
+#### Threat Intelligence Communication Standards
+Three common threat intelligence sharing standards include the following:
++ **Structured Threat Information Expression (STIX)**: This is a set of specifications for exchanging cyber threat information between organizations. The Cyber Observable Expression (CybOX) standard has been incorporated into STIX.
++ **Trusted Automated Exchange of Indicator Information (TAXII)**: This is the specification for an application layer protocol that allows the communication of CTI over HTTPS. TAXII is designed to support STIX.
++ **CybOX**: This is a set of standardized schema for specifying, capturing, characterizing, and communicating events and properties of network operations that supports many cybersecurity functions.
+
+## 21. Cryptography
+
+:computer: LAB - [Creating Codes](https://github.com/13sauca13/Cyberops-associate/blob/f057f9544fa87decf69d682902891dd8e7e2fecd/Resources/Labs/21.0.3%20Class%20activity_Creating%20codes.pdf)
+
+### 21.1 Integrity and Authenticity
+There are four elements of secure communications:
++ **Data Integrity**
++ **Origin Authentication**
++ **Data Confidentiality**
++ **Data Non-Repudiation**
+
+Hashes are used to verify and ensure data integrity. Hashing is based on a one-way mathematical function that is relatively easy to compute, but significantly harder to reverse. There are four well-known hash functions:
++ MD5 with 128-bit digest
++ SHA-1
++ SHA-2: It includes SHA-224 (224 bit), SHA-256 (256 bit), SHA-384 (384 bit), and SHA-512 (512 bit).
++ SHA-3: SHA-3 is the newest hashing algorithm. Includes SHA3-224 (224 bit), SHA3-256 (256 bit), SHA3-384 (384 bit), and SHA3-512 (512 bit).
+
+To add origin authentication and integrity assurance, use a keyed-hash message authentication code (HMAC). HMAC uses an additional secret key as input to the hash function.
+
+:computer: LAB - [Hashing Things Out](https://github.com/13sauca13/Cyberops-associate/blob/3597348d9af9042e00a0046ee8e70d6d86ed5854/Resources/Labs/21.1.6%20Lab_Hashing%20things%20out.pdf)
