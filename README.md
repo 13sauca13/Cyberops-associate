@@ -1,5 +1,14 @@
 # Cyberops-associate
 
+> :movie_camera: [Zero Days](https://archive.org/details/zero.-days.-2016.720p)
+>
+> :movie_camera: [A long day (with no cybersecurity)](https://www.youtube.com/watch?v=PYXdTIwdkj0)
+>
+> :movie_camera: [Cyber Security | Short Film](https://www.youtube.com/watch?v=GX_XsdNv1PY)
+>
+> :movie_camera: [Security Awareness Series](https://staysafeonline.org/resources/security-awareness-episodes/)
+
+
 ## 1. The Danger
 
 ### 1.1 War stories
@@ -900,3 +909,48 @@ Digital signatures are a mathematical technique used to provide authenticity, in
 + PKI Applications
 + Encrypted Network Transactions
 + Encryption and Security Monitoring
+
+## 22. Endpoint Protection
+
+### 22.1 Antimalware Protection
+:eyes: [AV-TEST](https://www.av-test.org/en/)
+
+Endpoints are hosts on the network that can access or be accessed by other hosts on the network (computers, servers and Internet of Things (IoT) devices)
++ **Host-Based Malware Protection**:
+  + Antivirus/Antimalware Software
+    + Signature-base: Recognizes various characteristics of known malware files.
+    + Heuristics-based: Recognizes general features shared by various types of malware.
+    + Behavior-based: Employs analysis of suspicious behavior.
+  + Host-based Firewall
+  + Host-based Security Suites: Include antivirus, anti-phishing, safe browsing, Host-based intrusion prevention system, and firewall capabilities.
++ **Network-Based Malware Protection**:
+  + Advanced Malware Protection (AMP)
+  + Email Security Appliance (ESA)
+  + Web Security Appliance (WSA)
+  + Network Admission Control (NAC)
+ 
+### 22.2 Host-based Intrusion Prevention
+#### Host-based Firewalls
+Host-based personal firewalls are standalone software programs that control traffic entering or leaving a computer.
++ Windows Defender Firewall
++ iptables
++ nftables
++ TCP Wrappers
+
+#### Host-based Intrusion Detection
+A host-based intrusion detection system (HIDS) is designed to protect hosts against known and unknown malware. A HIDS can perform detailed monitoring and reporting on the system configuration and application activity. It can provide log analysis, event correlation, integrity checking, policy enforcement, rootkit detection, and alerting. A HIDS will frequently include a management server endpoint.
+Host-based security systems function as both detection and prevention systems.
+(eg: Cisco AMP, AlienVault, Tripwire, Open Source HIDS SECurity (OSSEC))
+
+### 22.3 Application Security
+An attack surface is the sum of all vulnerabilities in a given system. The SANS Institute describes three components of the attack surface:
++ Network Attack Surface
++ Software Attack Surface
++ Human Attack Surface
+
+One way of decreasing the attack surface is to limit access to potential threats by creating lists of prohibited applications. This is known as **lock listing**
+**Allow lists** are created in accordance with a security baseline that has been established by an organization.
+:eyes: [Te Spamhaus Project](https://www.spamhaus.org/)
+
+**Sandboxing** is a technique that allows suspicious files to be executed and analyzed in a safe environment. Automated malware analysis sandboxes offer tools that analyze malware behavior.
+(eg: Cuckoo Sandbox, VirusTotal, ANY.RUN)
