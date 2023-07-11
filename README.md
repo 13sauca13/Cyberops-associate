@@ -954,3 +954,64 @@ One way of decreasing the attack surface is to limit access to potential threats
 
 **Sandboxing** is a technique that allows suspicious files to be executed and analyzed in a safe environment. Automated malware analysis sandboxes offer tools that analyze malware behavior.
 (eg: Cuckoo Sandbox, VirusTotal, ANY.RUN)
+
+## 23. Endpoint Vulnerability Assessment
+
+### 23.1 Network and Server Profiling
+#### Network profiling
+It provides a statistical baseline that serves as a reference poin for normal operation. The most important elements of the network profile are:
+| Network Profile Element | Description |
+| --- | --- |
+| Session Duration | This is the time between the establishment of a data flow and its termination. |
+| Total throughput | This is the amount of data passing from a given source to a given destination in a given period of time. |
+| Ports used | This is a list of TCP or UDP processes that are available to accept data. |
+| Critical asset address space | These are the IP addresses or the logical location of essential systems or data. |
+
+Server profiling is used to establish the accepted operating state of servers. A server profile is a security baseline for a given server. It establishes the network, user, and application parameters that are accepted for a specific server
+
+#### Network Anomaly Detection
+One approach to detection of network attacks is the analysis of the diverse, unstructured data (such as such as the features of packet flow, features of the packets themselves, and telemetry from multiple sources) using Big Data analytics techniques. This is known as network behavior analysis (NBA).
+
+### 23.2 Comon Vulnerability Scoring System (CVSS)
+The Common Vulnerability Scoring System (CVSS) is a risk assessment tool that is designed to convey the common attributes and severity of vulnerabilities in computer hardware and software systems. It is a vendor-neutral, industry standard, open framework for weighting the risks of a vulnerability using a variety of metrics.
+:eyes: [Forum of Incident Response and Security Teams (FIRST)]([https://www.first.org/](https://www.first.org/cvss/calculator/3.0)https://www.first.org/cvss/calculator/3.0)
+
+**COMPLETAR**
+
+Other vunerability information sources:
++ Common Vulnerabilities and Exposures (CVE)
++ National Vulnerability Database (NVD)
+
+### 23.3 Secure Device Management
+Risk management involves the selection and specification of security controls for an organization, is an ongoing, multi-step, cyclical process:
++ Risk identification
++ Risck assessment
++ Risk response plannin
++ Response implementation
++ Monitor assess results
+
+Risk is determined as the relationship between threat, vulnerability, and the nature of the organization.
+
+#### Movile Device Management
+MDM systems, such as Cisco Meraki Systems Manager, allow security personnel to configure, monitor and update a very diverse set of mobile clients from the cloud.
+
+#### Configuration Management
+Configuration management addresses the inventory and control of hardware and software configurations of systems. Secure device configurations reduce security risk.
+(eg: Puppet, Chef, Ansible, SaltStack)
+
+#### Enterprise Patch Management
+Patch management involves all aspects of software patching, including identifying required patches, acquiring, distributing, installing, and verifying that the patch is installed on all required systems. Installing patches is frequently the most effective way to mitigate software vulnerabilities.
+(eg: SolarWinds, LANDesk, Microsoft System Center Configuration Manager (SCCM))
+
+### 23.4 Information Security Management Systems
+An Information Security Management System (ISMS) consists of a management framework through which an organization identifies, analyzes, and addresses information security risks. ISMSs are not based in servers or security devices. Instead, an ISMS consists of a set of practices that are systematically applied by an organization to ensure continuous improvement in information security. ISMSs provide conceptual models that guide organizations in planning, implementing, governing, and evaluating information security programs.
+
+####ISO-270001
+The ISO 27001 certification is a global, industry-wide specification for an ISMS.
+
+#### NIST Cybersecurity Framework
+NIST has also developed the Cybersecurity framework which is similar to the ISO/IEC 27000 standards. The NIST framework is a set of standards designed to integrate existing standards, guidelines, and practices to help better manage and reduce cybersecurity risk.
+
+## 24. Technologies and Protocols
+
+### 24.1 Monitoring Common Protocols
