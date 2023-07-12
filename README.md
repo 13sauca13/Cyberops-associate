@@ -1202,3 +1202,52 @@ A typical network has a multitude of different logs to keep track of and most of
 :computer: LAB - [Investigate a Malware Exploit](https://github.com/13sauca13/Cyberops-associate/blob/645051acf3ccbc2d9760ee64280df8eb2e85c34d/Resources/Labs/27.2.15%20Lab_Investigating%20a%20malware%20exploit.pdf)
 
 :computer: LAB - [Investigating an Attack on a Windows Host](https://github.com/13sauca13/Cyberops-associate/blob/645051acf3ccbc2d9760ee64280df8eb2e85c34d/Resources/Labs/27.2.16%20Lab_Investigating%20an%20attack%20on%20a%20windows%20host.pdf)
+
+### 27.3 Enhancing the Work of the Cybersecurity Analyst
+Dashboards provide a combination of data and visualizations that are designed to improve access to and interpretation of large amounts of information.
+Because of the critical nature of network security monitoring, it is essential that workflows are managed. Workflows are the sequence of processes and procedures through which work tasks are completed.
+Runbook automation, or workflow management systems, provide the tools necessary to streamline and control processes in a cybersecurity operations center. Sguil provides basic workflow management.
+
+## 28. Digital Forensics and Incident Analysis and Response
+
+### 28.1 Evidence Handling and Attack Attribution
+**Digital forensics** is the recovery and investigation of information found on digital devices as it relates to criminal activity. Indicators of compromise are the evidence that a cybersecurity incident has occurred.
+
+![Digital Evidence Forensics Process](https://github.com/13sauca13/Cyberops-associate/blob/06bbf5a8489b92e2d821c1b99fef621d54558482/Resources/Pictures/Digital%20Evidence%20Forensic%20Process.png)
+
+#### Evidence collection order
+:eyes: [IETF RFC 3227](https://www.ietf.org/rfc/rfc3227.txt)
+
+IETF RFC 3227 provides guidelines for the collection of digital evidence. It describes an order for the collection of digital evidence based on the volatility of the data.
+Most volatile to least volatile evidence collection order is as follows:
+1. Memory registers, caches
+2. Routing table, ARP cache, process table, kernel statistics, RAM
+3. Temporary file systems
+4. Non-volatile media, fixed and removable
+5. Remote logging and monitoring data
+6. Physical interconnections and topologies
+7. Archival media, tape or other backups
+
+#### Chain of custody
+Chain of custody involves the collection, handling, and secure storage of evidence. Detailed records should be kept
+
+#### Data integrity and preservation
+Timestamping of files should be preserved. For this reason, the original evidence should be copied, and analysis should only be conducted on copies of the original. This is to avoid accidental loss or alteration of the evidence. Because timestamps may be part of the evidence, opening files from the original media should be avoided.
+
+#### Attack Attribution
+Threat attribution refers to the act of determining the individual, organization, or nation responsible for a successful intrusion or attack incident.
+One way to attribute an attack is to model threat actor behavior. The MITRE Adversarial Tactics, Techniques & Common Knowledge (ATT&CK) Framework enables the ability to detect attacker tactics, techniques, and procedures (TTP) as part of threat defense and attack attribution.
+:eyes: [MITRE ATT&CK](https://attack.mitre.org/)
+
+### 28.2 The Cyber Kill Chain
+The Cyber Kill Chain was developed by Lockheed Martin to identify and prevent cyber intrusions. There are seven steps to the Cyber Kill Chain.
+![Cyber Kill Chain](https://github.com/13sauca13/Cyberops-associate/blob/75ea28612a4a1e44262764247b34bfeb40b14eb9/Resources/Pictures/Cyber%20Kill%20Chain.png)
+
+### 28.3 The Diamond Model of Intrusion Analysis
+**COMPLETAR**
+
+### 28.4 Incident Response
+**COMPLETAR**
+
+:computer: LAB - [Incident Handling](https://github.com/13sauca13/Cyberops-associate/blob/4877b5dc441d8094ed0416643fb6fa846ab847b5/Resources/Labs/28.4.13%20Lab_Incident%20handling.pdf)
+
