@@ -1162,3 +1162,43 @@ Alerts can come from a number of sources:
 :exclamation: [Check Snort rule structure](https://contenthub.netacad.com/cyberops/26.1.6)
 
 :computer: LAB - [Snort and Firewall Rules](https://github.com/13sauca13/Cyberops-associate/blob/cd016459ffc27a9304fd4f9202d147a02e1042c1/Resources/Labs/26.1.7%20Lab_Snort%20and%20firewall%20rules.pdf)
+
+### 26.2 Overview of Alert Evaluation
+Security incidents are classified using a scheme borrowed from medical diagnostics. Alerts can be classified as follows:
++ **True positive**
++ **False Positive**
+The absence of an alert can be classified as:
++ **True Negative**
++ **False Negative**
+
+Statistical techniques can be used to evaluate the risk that exploits will be successful in a given network. This type of analysis can help decision makers to better evaluate the cost of mitigating a threat with the damage that an exploit could cause. There are two aproaches:
++ **Deterministic Analysis**: For an exploit to be successful, all prior steps in the exploit must also be successful. The cybersecurity analyst knows the steps for a successful exploit.
++ **Probabilistic Analysis**: Statistical techniques are used to determine the probability that a successful exploit will occur based on the likelihood that each step in the exploit will succeed.
+
+## 27. Working with Network Security Data
+
+### 27.1 A Common Data Platform
+
+#### ELK
+A typical network has a multitude of different logs to keep track of and most of those logs are in different formats. The Elastic Stack attempts to solve this problem by providing a single interface view into a heterogenous network. The Elastic Stack consists of *Elasticsearch, Logstash, and Kibana* (ELK).
+![ELK Core components](https://github.com/13sauca13/Cyberops-associate/blob/efc62228b0f02ced670ab8dacd949334de4f0ec7/Resources/Pictures/ELK%20Core%20components.png)
+
++ **Logstash**: Extract, transform and load system with the ability to take in various sources of log data and transform or parse the data through translation, sorting, aggregating, splitting, and validation. After transforming the data, the data is loaded into the Elasticsearch database in the proper file format.
++ **Beats**: Beats agents are open source software clients used to send operational data directly into Elasticsearch or through Logstash.
++ **Elasticsearch**: Elasticsearch supports near real-time search using simple REST APIs to create or update JavaScript Object Notation (JSON) documents using HTTP requests. Searches can be made using any program capable of making HTTP requests such as a web browser, Postman, cURL, etc. These APIs can also be accessed by Python or other programming language scripts for automated operations.
++ **Kibana**: Kibana provides an easy to use graphical user interface for managing Elasticsearch.
+
+:computer: LAB - [Convert Data into a Universal Format](https://github.com/13sauca13/Cyberops-associate/blob/33bb9b04ecfa06b35bf3bcd5a3be5232ce016c4f/Resources/Labs/27.1.5%20Lab_Convert%20data%20into%20a%20universal%20format.pdf)
+
+### 27.2 Investigating Network Data
+:computer: LAB - [Regular Expression Tutorial](https://github.com/13sauca13/Cyberops-associate/blob/645051acf3ccbc2d9760ee64280df8eb2e85c34d/Resources/Labs/27.1.5%20Lab_Convert%20data%20into%20a%20universal%20format.pdf)
+
+:computer: LAB - [Extract an Executable from a PCAP](https://github.com/13sauca13/Cyberops-associate/blob/645051acf3ccbc2d9760ee64280df8eb2e85c34d/Resources/Labs/27.2.10%20Lab_Extract%20an%20executable%20from%20a%20pcap.pdf)
+
+:computer: LAB - [Interpret HTTP and DNS Data to Isolate Threat Actor](https://github.com/13sauca13/Cyberops-associate/blob/645051acf3ccbc2d9760ee64280df8eb2e85c34d/Resources/Labs/27.2.12%20Lab_Interpret%20http%20and%20dns%20data%20to%20isolate%20threat%20actor.pdf)
+
+:computer: LAB - [Isolate Compromised Host Using 5-Tuple](https://github.com/13sauca13/Cyberops-associate/blob/645051acf3ccbc2d9760ee64280df8eb2e85c34d/Resources/Labs/27.2.14%20Lab_Isolate%20compromised%20host%20using%205%20tuple.pdf)
+
+:computer: LAB - [Investigate a Malware Exploit](https://github.com/13sauca13/Cyberops-associate/blob/645051acf3ccbc2d9760ee64280df8eb2e85c34d/Resources/Labs/27.2.15%20Lab_Investigating%20a%20malware%20exploit.pdf)
+
+:computer: LAB - [Investigating an Attack on a Windows Host](https://github.com/13sauca13/Cyberops-associate/blob/645051acf3ccbc2d9760ee64280df8eb2e85c34d/Resources/Labs/27.2.16%20Lab_Investigating%20an%20attack%20on%20a%20windows%20host.pdf)
